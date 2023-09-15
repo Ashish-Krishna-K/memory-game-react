@@ -55,7 +55,7 @@ function App() {
         </h2>
         <h2>Pokémon and Pokémon character names are trademarks of Nintendo.</h2>
         <h2>
-          Pokemon data obtained from
+          Pokemon data obtained from {' '}
           <a href="https://pokeapi.co/">PokeAPI</a>
         </h2>
       </footer>

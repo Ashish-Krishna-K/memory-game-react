@@ -19,6 +19,7 @@ footer {
   background-color: var(--footer-color);
   color: var(--header-color);
   box-shadow: 0px -1px 5px 5px var(--header-color);
+  font-size: 0.5rem;
 }
 
 footer a,
@@ -30,12 +31,11 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
-  height: 76svh;
+  height: 83svh;
 }
 
 @media (max-width: 500px) {
   footer {
-    font-size: 2vw;
     line-height: 6vh;
   }
 }
