@@ -30,12 +30,12 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
-  height: 85vh;
+  height: 76svh;
 }
 
 @media (max-width: 500px) {
   footer {
-    font-size: 4vw;
+    font-size: 2vw;
     line-height: 6vh;
   }
 }
