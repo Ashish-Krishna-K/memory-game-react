@@ -1,0 +1,13 @@
+.score-board {
+  display: flex;
+  justify-content: space-around;
+  color: var(--footer-color);
+}
+
+@media (max-width: 500px) {
+  .score-board {
+    font-size: 3vw;
+    line-height: 4vh;
+    padding: 0 5vw;
+  }
+}
