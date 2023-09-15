@@ -3,6 +3,8 @@ import { type PokemonData, type PokemonDisplayProps } from "../appTypes";
 import { capitalize } from "../helpers";
 import "../styles/PokemonDisplayCard.css";
 
+// component to display the individual clickable
+// item/card
 export default function PokemonDisplayCard({
   id,
   handleSelection,
@@ -12,12 +14,20 @@ export default function PokemonDisplayCard({
     name: "",
     image: "",
   });
+
+  // fetching data from api
   useEffect(() => {
+    // ignore variable is used
+    // to ensure the state is
+    // not changed after the
+    // component is unmounted.
     let ignore = false;
     (async () => {
       try {
         const api = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
         const data = await api.json();
+        // ignore is false so component is
+        // still mounted.
         if (!ignore) {
           setApiData({
             id: data.id,
@@ -29,6 +39,10 @@ export default function PokemonDisplayCard({
         console.log(error);
       }
     })();
+    // component is unounted
+    // set ignore to true to
+    // avoid further state
+    // changes.
     return () => {
       ignore = true;
     };

@@ -1,6 +1,7 @@
 import { type ScoreProps } from "../appTypes";
 import "../styles/ScoreBoard.css";
 
+// component to display the score board.
 export default function ScoreBoard({
   currentScore,
   bestScore,

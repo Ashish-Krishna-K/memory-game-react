@@ -7,15 +7,22 @@ import GameOver from "./components/GameOver";
 function App() {
   const [currentScore, setCurrentScore] = useState<number>(0);
   const [bestScore, setBestScore] = useState<number>(0);
+  // when it's set to true we'll show the game over screen
+  // with option to play again
   const [gameOver, setGameOver] = useState<boolean>(false);
 
+  // function to increment scores
   const incrementScores = () => {
     setCurrentScore(currentScore + 1);
+    // only change the best score if
+    // current score is greater than
+    // current best
     if (currentScore >= bestScore) {
       setBestScore(bestScore + 1);
     }
   };
 
+  // function to change the game over state
   const changeGameOverState = (val: boolean) => setGameOver(val);
 
   return (
@@ -25,6 +32,10 @@ function App() {
       </header>
       <main>
         <ScoreBoard currentScore={currentScore} bestScore={bestScore} />
+        {/* 
+          if gameover is true show the gameover 
+          screen, if not show the game screen
+        */}
         {gameOver ? (
           <GameOver
             gameOver={changeGameOverState}
