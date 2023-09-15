@@ -54,7 +54,8 @@ function App() {
           <a href="https://github.com/Ashish-Krishna-K">Ashish-Krishna-K</a>
         </h2>
         <h2>Pokémon and Pokémon character names are trademarks of Nintendo.</h2>
-        <h2>Pokemon data obtained from 
+        <h2>
+          Pokemon data obtained from
           <a href="https://pokeapi.co/">PokeAPI</a>
         </h2>
       </footer>
